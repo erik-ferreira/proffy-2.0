@@ -1,0 +1,27 @@
+#page-header {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: var(--color-primary-dark);
+}
+
+#page-header button {
+  border: 0;
+  margin: 1rem 0 0 3rem;
+  background: #FFF;
+  cursor: pointer;
+  display: flex;
+  background: var(--color-primary-dark);
+}
+
+#page-header span {
+  font: 400 1.8rem Inter;
+  color: var(--color-text-in-primary);
+}
+
+#page-header img {
+  width: 8rem;
+  height: 8rem;
+}

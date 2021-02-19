@@ -1,0 +1,43 @@
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-item .button-container {
+  width: 100%;
+  height: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-line-in-white);
+  margin-top: 1.4rem;
+}
+
+.schedule-item .button-container button {
+  border: 0;
+  cursor: pointer;
+  background: var(--color-box-base);
+  transition: opacity 0.2s;
+  font: 700 1.8rem Inter;
+  color: var(--color-text-delete);
+  padding: 0 1rem;
+}
+
+.schedule-item button:hover {
+  opacity: 0.8;
+}
+
+@media(min-width: 750px) {
+  .schedule-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 1.6rem;
+  }
+
+  .schedule-item .button-container {
+    grid-column-start: 1; 
+    grid-column-end: 4;
+  }
+}

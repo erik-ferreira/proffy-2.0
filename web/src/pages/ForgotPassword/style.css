@@ -1,0 +1,95 @@
+#page-forgot-password {
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--color-background);
+}
+
+#page-forgot-password form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-forgot-password fieldset {
+  border: 0;
+  margin-top: 4.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-forgot-password fieldset legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30rem;
+  margin: 0 auto;
+  font: 700 3.4rem Poppins;
+  color: var(--color-text-title);
+}
+
+#form-forgot-password fieldset span {
+  font: 400 2rem Poppins;
+  margin: 1.8rem 0 2.8rem;
+}
+
+#form-forgot-password > button {
+  display: none;
+}
+
+#form-forgot-password fieldset input {
+  border-radius: 1.0rem;
+}
+
+#form-forgot-password fieldset button {
+  width: 40rem;
+  height: 5.8rem;
+  border: 0;
+  border-radius: 0.8rem;
+  font: 700 1.8rem Archivo;
+  background: var(--color-button-background-inactive);
+  color: var(--color-text-complement);
+  margin-top: 2.4rem;
+  cursor: pointer;
+}
+
+@media(min-width: 1100px) {
+  #page-forgot-password {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #form-forgot-password {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  #form-forgot-password > button {
+    display: block;
+    width: 3.8rem;
+    height: 2.6rem;
+    margin: 2rem 35rem 0 0;
+    border: 0;
+    background: var(--color-background);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+   #form-forgot-password fieldset {
+    margin: auto auto;
+  }
+
+  #form-forgot-password fieldset legend {
+    font-size: 3.6rem;
+  }
+}

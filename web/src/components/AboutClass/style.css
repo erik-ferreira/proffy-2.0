@@ -1,0 +1,17 @@
+@media(min-width: 750px) {
+  .input-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .input-section div {
+    width: 50%;
+  }
+
+  .input-section div:first-child {
+    width: 70%;
+    margin-right: 2.4rem;
+  }
+}

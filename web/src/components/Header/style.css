@@ -1,0 +1,151 @@
+.container-header {
+  width: 100%;
+  height: 30rem;
+  background-color: var(--color-primary);
+}
+
+.container-header .content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-header .content-header .title-section {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5.4rem 0 3.6rem;
+}
+
+.container-header .content-header .title-section h2 {
+  font: 700 2.5rem Inter;
+  color: var(--color-title-in-primary);
+  margin-bottom: 1rem;
+}
+
+.container-header .content-header .title-section span {
+  font: 1.6rem Inter;
+  color: var(--color-text-in-primary);
+}
+
+.container-header .content-header .emoji-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-header .content-header .emoji-section img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.8rem;
+}
+
+.container-header .content-header .emoji-section span {
+  font: 2rem Inter;
+  color: var(--color-text-in-primary);
+}
+
+#search-teachers {
+  max-width: 75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -7rem;
+} 
+
+#search-teachers div:first-child label {
+  color: var(--color-text-in-primary);
+}
+
+#search-teachers .button-container {
+  width: 40rem;
+  margin-top: 1.4rem;
+}
+
+#search-teachers .button-container button {
+  width: 100%;
+  height: 5.6rem;
+  background: var(--color-secondary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.6rem Archivo;
+  
+  transition: background-color 0.2s;
+}
+
+#search-teachers .button-container button:hover {
+  background: var(--color-secondary-dark);
+}
+
+@media(min-width: 750px) {
+  .container-header {
+    padding-bottom: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container-header .content-header {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .container-header .content-header .title-section {
+    width: 40%;
+    margin: 0;
+    align-items: flex-start;
+    
+  }
+  
+  .container-header .content-header .title-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .container-header .content-header .title-section span {
+    width: 70%;
+    font-size: 1.4rem;
+  }
+
+  .container-header .content-header .emoji-section {
+    align-self: flex-end;
+  }
+  
+  .container-header .content-header .emoji-section img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .container-header .content-header .emoji-section span {
+    font-size: 1.4rem;
+  }
+
+  #search-teachers {
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    margin: -6rem auto 0;
+  }
+
+  #search-teachers div label {
+    color: var(--color-text-in-primary);
+  }
+
+  #search-teachers .select-block {
+    margin: 0;
+  }
+  #search-teachers .input-block-profile input {
+    margin: 0.5rem 0 0;
+  }
+
+  #search-teachers .button-container {
+    width: 15rem;
+    margin-top: 2.4rem;
+  } 
+}

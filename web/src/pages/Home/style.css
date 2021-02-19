@@ -1,0 +1,195 @@
+#page-home {
+  width: 100vw;
+  height: 100vh;
+  
+  background: var(--color-primary);
+}
+
+#page-home header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-home header button {
+  border: 0;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  margin-right: 2.4rem;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-home header button:first-child {
+  background: var(--color-primary);
+}
+
+#page-home header button:last-child {
+  background: var(--color-primary-dark);
+  transition: background 0.2s;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-home header button:last-child:hover {
+  background: var(--color-primary-darker);
+}
+
+#page-home header button img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+#page-home header button span {
+  font: 400 1.5rem Inter;
+  color: var(--color-text-in-primary);
+  margin-left: 1.8rem;
+}
+
+#page-home main {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4.8rem;
+}
+
+#page-home main .logo-container {
+  padding: 1.4rem 0;
+}
+
+.logo-container h2 {
+  font: 400 2.4rem Inter;
+  color: var(--color-text-in-primary);
+}
+
+#page-home main .hero-image {
+  width: 100%;
+}
+
+#page-home footer {
+  height: 25%;
+  text-align: center;
+  padding-top: 1.8rem;
+  background: var(--color-background);
+}
+
+footer .texts-container .welcome {
+  font-family: Inter;
+  font-size: 2.4rem;
+  color: var(--color-text-base);
+  margin-bottom: 1.8rem;
+}
+
+footer .texts-container .total-connections {
+  font: 1.8rem 400 Inter;
+  color: var(--color-text-complement);
+}
+
+footer .buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+}
+
+footer .buttons-container a {
+  width: 20rem;
+  height: 10.4rem;
+  border-radius: 0.8rem;
+  font: 700 2.0rem Archivo;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--color-button-text);
+
+  transition: background-color 0.2s;
+}
+
+footer .buttons-container a:first-child {
+  margin-right: 2rem;
+  background: var(--color-primary);
+}
+
+footer .buttons-container a:last-child {
+  background: var(--color-secondary);
+}
+
+footer .buttons-container a.study:hover {
+  background: var(--color-primary-dark);
+}
+
+footer .buttons-container a.give-classes:hover {
+  background: var(--color-secondary-dark);
+}
+
+@media (min-width: 1100px) {
+  #page-home header {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #page-home main {
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #page-home main .logo-container h2 {
+    width: 40rem;
+    font-size: 3.6rem;
+  }
+
+  #page-home main .hero-image {
+    width: 50%;
+    margin-left: 3.6rem;
+  }
+
+  #page-home footer {
+    padding: 0 3.6rem;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #page-home footer .texts-container {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .texts-container .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  footer .texts-container .total-connections {
+    width: 18rem;
+    text-align: end;
+  }
+
+  footer .buttons-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer .buttons-container a {
+    width: 25rem;
+  }
+}

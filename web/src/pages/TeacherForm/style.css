@@ -1,0 +1,54 @@
+#page-teacher-form {
+  width: 100vw;
+  height: 100vh;
+}
+
+#page-teacher-form main {
+  max-width: 75rem;
+  width: 100%;
+  margin: -3.2rem auto 3.2rem;
+  border-radius: 0.8rem;
+  padding-top: 6.4rem;
+  background: var(--color-box-base);
+  overflow: hidden;
+}
+
+fieldset .div-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+fieldset .div-data > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+fieldset .div-data > div:first-child span {
+  font: 700 2rem Inter;
+  color: var(--color-text-title);
+  margin-left: 0.8rem;
+}
+
+fieldset .div-data > div:last-child {
+  display: flex;
+  width: 19rem;
+}
+
+fieldset .div-data div img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+@media(min-width: 750px) {
+  #page-teacher-form main {
+    max-width: 70rem;
+    padding: 5.8rem 3.6rem;
+  }
+
+  fieldset .div-data > div:last-child {
+    width: 50%;
+  }
+}

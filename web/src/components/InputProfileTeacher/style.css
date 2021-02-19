@@ -1,0 +1,43 @@
+.input-block-profile {
+  position: relative;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.input-block-profile input {
+  width: 100%;
+  height: 6rem;
+  margin: 0.8rem 0 1.8rem;
+  border: 1px solid var(--color-line-in-white);
+  border-radius: 0.8rem;
+  background: var(--color-input-background);
+  color: var(--color-text-base);
+  padding: 2.4rem;
+  font: 1.6rem Inter;
+  outline: 0;
+}
+
+.input-block-profile label {
+  font: 1.4rem Inter;
+  color: var(--color-text-complement);
+}
+
+.input-block-profile:focus-within::after {
+  width: calc(100% - 3.2rem);
+  height: 2px;
+  content: '';
+  background: var(--color-primary-light);
+  position: absolute;
+  left: 1.6rem;
+  right: 1.6rem;
+  bottom: 1.8rem;
+}
+
+@media(min-width: 750px) {
+  .input-block-profile {
+    width: 100%;
+  }
+}
