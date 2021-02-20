@@ -1,6 +1,9 @@
 # Funcionalidades
 
 - Rota para criar usuário
+- Rota para recuperação de senha
+- Rota para se cadastrar como professor
+- Rota para atualizar os dados de um professor
 
 ## Conexões
 
