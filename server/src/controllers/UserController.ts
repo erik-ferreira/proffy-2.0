@@ -11,23 +11,21 @@ export default class UserController {
     bycript.hash(password, saltRounds, async (err, hash) => {
 
       const emailsUsers = await db('users').select('email')
-
+      
       for(let user of emailsUsers) {
         if(user.email === email) {
           return response.status(400).send('E-mail já está cadastrado!')
           break
-        } 
-
-        const userId = await db('users').insert({
-          name,
-          surname, 
-          email, 
-          password: hash
-        })
-
-        return response.json(userId)
-        
+        }
       }      
+      const userId = await db('users').insert({
+        name,
+        surname, 
+        email, 
+        password: hash
+      })
+
+      return response.json(userId)  
     })
   }
 
