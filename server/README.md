@@ -2,9 +2,9 @@
 
 ## Usuário
 
-- [x] Rota para criar usuário
-- [x] Rota para fazer o login
-- [ ] Rota para recuperação de senha
+- [x] Rota para criar usuário; UserController.create
+- [x] Rota para fazer o login; UserController.index
+- [ ] Rota para recuperação de senha;
 
 ## Professor
 
@@ -13,8 +13,8 @@
 
 ## Conexões
 
-- [ ] Rota para listar o total de conexões realizados;
-- [ ] Rota para criar uma nova conexão;
+- [x] Rota para listar o total de conexões realizados; ConnectionController.index
+- [x] Rota para criar uma nova conexão; ConnectionController.create
 
 ## Aulas
 
