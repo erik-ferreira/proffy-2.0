@@ -8,7 +8,7 @@
 
 ## Professor
 
-- [ ] Rota para se cadastrar como professor
+- [x] Rota para se cadastrar como professor e criar aula
 - [ ] Rota para atualizar os dados de um professor
 
 ## Conexões
@@ -18,6 +18,5 @@
 
 ## Aulas
 
-- [ ] Rota para criar uma aula;
 - [ ] Rota para listar aulas;
     - [ ] Filtrada por matéria, dia da semana e horário
