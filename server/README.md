@@ -20,3 +20,4 @@
 
 - [ ] Rota para listar aulas;
     - [ ] Filtrada por matéria, dia da semana e horário
+- [ ] Rota para deletar o horário de uma aula
