@@ -18,6 +18,8 @@ routes.post('/connections', connectionController.create)
 
 routes.post('/teachers', teacherController.create)
 routes.put('/teachers', teacherController.update)
-routes.delete('/teachers/:id', classesController.delete)
+
+routes.get('/classes', classesController.index)
+routes.delete('/classes/:id', classesController.delete)
 
 export default routes
