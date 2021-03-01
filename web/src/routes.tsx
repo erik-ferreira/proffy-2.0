@@ -5,6 +5,7 @@ import Landing from './pages/Landing'
 import CreateRegister from './pages/CreateRegister'
 import SuccessScreen from './components/SuccessScreen'
 import ForgotPassword from './pages/ForgotPassword'
+import RedefinePassword from './pages/RedefinePassword'
 import Home from './pages/Home'
 import TeacherProfile from './pages/TeacherProfile'
 import TeacherForm from './pages/TeacherForm'
@@ -17,10 +18,11 @@ function Routes() {
       <Route path="/create-register" component={CreateRegister} />
       <Route path="/success-screen" render={props => <SuccessScreen {...props} />} />
       <Route path="/forgot-password" component={ForgotPassword} />
+      <Route path="/redefine-password" component={RedefinePassword} />
       <Route path="/home" component={Home} />
       <Route path="/teacher-profile" component={TeacherProfile} />
       <Route path="/teacher-form" component={TeacherForm} />
-      <Route path="/teacher-list" component={TeacherList} /> 
+      <Route path="/teacher-list" component={TeacherList} />
     </BrowserRouter>
   )
 }
