@@ -1,37 +1,22 @@
-import React, { useState, FormEvent } from 'react'
-import { FiEye, FiEyeOff } from 'react-icons/fi'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import PageHeader from '../../components/PageHeader'
 import Input from '../../components/Input'
+import InputPassword from '../../components/InputPassword'
 
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 
 import './style.css'
 
 function Landing() {
-  const [toggleInputType, setToggleInputType] = useState('password')
-  const [togglePassword, setTogglePassword] = useState(false)
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
 
   // useEffect(() => {
   //   if(email.length > 0 && password.length > 0) {
   //     console.log('buttao fica verde')
   //   }
   // }, [email, password])
-
-  function handleTogglePassword(event: FormEvent) {
-    event.preventDefault()
-    
-    setTogglePassword(togglePassword ? false : true)
-
-    if(toggleInputType === 'password') {
-      setToggleInputType('text')
-    } else {
-      setToggleInputType('password')
-    }
-  }
 
   return (
     <div id="page-landing">
@@ -50,17 +35,7 @@ function Landing() {
                 onChange={event => setEmail(event.target.value)}
               />
 
-              <Input 
-                label="Senha" 
-                type={toggleInputType}
-              >
-                <button onClick={handleTogglePassword}>
-                  {togglePassword 
-                    ? <FiEyeOff size={22} color="#8257E5" />
-                    : <FiEye size={22} color="#9C98A6" />
-                  }
-                </button>
-              </Input>
+              <InputPassword />
             </div>
 
             <div id="input-footer">
