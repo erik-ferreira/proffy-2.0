@@ -1,30 +1,15 @@
-import React, { useState, FormEvent } from 'react'
-import { FiEyeOff, FiEye } from 'react-icons/fi'
+import React, { FormEvent } from 'react'
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
 import { useHistory } from 'react-router-dom'
 
 import PageHeader from '../../components/PageHeader'
 import Input from '../../components/Input'
+import InputPassword from '../../components/InputPassword'
 
 import './style.css'
 
 function CreateRegister() {
   const history = useHistory()
-
-  const [toggleInputType, setToggleInputType] = useState('password')
-  const [togglePassword, setTogglePassword] = useState(false)
-
-  function handleTogglePassword(event: FormEvent) {
-    event.preventDefault()
-    
-    setTogglePassword(togglePassword ? false : true)
-
-    if(toggleInputType === 'password') {
-      setToggleInputType('text')
-    } else {
-      setToggleInputType('password')
-    }
-  }
 
   function handleNavigateToPageLanding(event: FormEvent) {
     event.preventDefault()
@@ -69,14 +54,7 @@ function CreateRegister() {
             <Input label="Nome" type="text" />
             <Input label="Sobrenome" type="text" />
             <Input label="E-mail" type="email" />
-            <Input label="Senha" type={toggleInputType}>
-              <button  onClick={handleTogglePassword}>
-                {togglePassword 
-                  ? <FiEyeOff size={22} color="#8257E5" />
-                  : <FiEye size={22} color="#9C98A6" />
-                }
-              </button>
-            </Input>
+            <InputPassword />
           </div>
 
           <button type="submit">Concluir cadastro</button>

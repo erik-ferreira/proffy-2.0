@@ -89,6 +89,16 @@
     padding: 5.8rem 3.6rem;
   }
 
+  .input-group .input-password {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .input-group .input-password > div {
+    margin: 0 0.5rem;
+  }
+
   .input-group-name {
     padding: 0;
   }

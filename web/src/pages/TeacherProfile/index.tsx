@@ -1,15 +1,13 @@
 import React from 'react'
-
-import TopBar from '../../components/TopBar'
-import InputProfileTeacher from '../../components/InputProfileTeacher'
-import Textarea from '../../components/Textarea'
-import Select from '../../components/Select'
-import ScheduleItem from '../../components/ScheduleItem'
+import AboutClass from '../../components/AboutClass'
+import Fieldset from '../../components/Fieldset'
 import Footer from '../../components/Footer'
+import InputProfileTeacher from '../../components/InputProfileTeacher'
+import ScheduleItem from '../../components/ScheduleItem'
+import Textarea from '../../components/Textarea'
+import TopBar from '../../components/TopBar'
 
 import './style.css'
-import Fieldset from '../../components/Fieldset'
-import AboutClass from '../../components/AboutClass'
 
 function TeacherProfile() {
   const avatar = "https://avatars.githubusercontent.com/u/70786024?v=4"
@@ -29,6 +27,26 @@ function TeacherProfile() {
         <form>
           <Fieldset legend="Seus dados">
             <div className="input-group">
+              <div className="input-password">
+                <InputProfileTeacher 
+                  name="currentPassword" 
+                  label="Senha atual" 
+                  type="password" 
+                />
+
+                <InputProfileTeacher 
+                  name="newPassword" 
+                  label="Nova senha" 
+                  type="password" 
+                />
+
+                <InputProfileTeacher 
+                  name="repeatPassword" 
+                  label="Repetir senha" 
+                  type="password" 
+                />
+              </div>
+
               <div className="input-group-name">
                 <InputProfileTeacher 
                   name="name" 
