@@ -1,6 +1,7 @@
 import { Request, Response } from 'express'
 import bycript from 'bcrypt'
 import db from '../database/connection'
+import crypto from 'crypto'
 
 export default class UserController {
   async create(request: Request, response: Response) {
@@ -15,14 +16,17 @@ export default class UserController {
       for(let user of emailsUsers) {
         if(user.email === email) {
           return response.status(400).send('E-mail já está cadastrado!')
-          break
         }
-      }      
+      }
+
+      const code = crypto.randomBytes(6).toString('hex')
+
       const userId = await db('users').insert({
         name,
         surname, 
         email, 
-        password: hash
+        password: hash,
+        code
       })
 
       return response.json(userId)  
