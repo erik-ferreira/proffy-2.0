@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import bcrypt from 'bcrypt'
+import crypto from 'crypto'
 import db from '../database/connection'
 
 import convertHoursToMinutes from '../utils/convertHoursToMinutes'
@@ -75,6 +76,8 @@ export default class TeacherController {
     })
 
     try {
+      const code = crypto.randomBytes(6).toString('hex')
+
       const user = await db('teachers')
       .join('users', 'teachers.user_id', '=', 'users.id')
       .select('users.password', 'users.id')
@@ -90,7 +93,8 @@ export default class TeacherController {
                 password: hash,
                 name,
                 surname,
-                email
+                email,
+                code
               })
               .where('id', user[0].id)
           })
