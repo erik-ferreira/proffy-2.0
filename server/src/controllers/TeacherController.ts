@@ -90,6 +90,7 @@ export default class TeacherController {
                 password: hash,
                 name,
                 surname,
+                email
               })
               .where('id', user[0].id)
           })
@@ -98,7 +99,6 @@ export default class TeacherController {
 
       await db('teachers')
         .update({
-          email, 
           whatsapp,
           bio
         })
