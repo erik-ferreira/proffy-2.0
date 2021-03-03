@@ -1,0 +1,25 @@
+<style>
+    .container {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Arial';
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container">
+    <h3>Olá <strong>{{name}}</strong>! Tudo bem? </h3>
+
+    <span>
+        Acesse <a href={{{link}}} target="_blank">esse link</a> 
+        e use este código <strong>{{code}}</strong> 
+        para recuperar sua senha!
+    </span>
+</div>
