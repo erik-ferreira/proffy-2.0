@@ -4,12 +4,16 @@
 
 - [x] Rota para criar usuário; UserController.create
 - [x] Rota para fazer o login; UserController.index
-- [ ] Rota para recuperação de senha;
+- [x] Rota para recuperação de senha;
+
+## Senha
+
+- [x] Rota para redefinir senha
 
 ## Professor
 
 - [x] Rota para se cadastrar como professor e criar aula
-- [ ] Rota para atualizar os dados de um professor
+- [x] Rota para atualizar os dados de um professor
 
 ## Conexões
 
@@ -18,6 +22,6 @@
 
 ## Aulas
 
-- [ ] Rota para listar aulas;
-    - [ ] Filtrada por matéria, dia da semana e horário
-- [ ] Rota para deletar o horário de uma aula
+- [x] Rota para listar aulas;
+    - [x] Filtrada por matéria, dia da semana e horário
+- [x] Rota para deletar o horário de uma aula
