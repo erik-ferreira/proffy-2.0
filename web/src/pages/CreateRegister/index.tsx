@@ -1,30 +1,31 @@
-import React, { FormEvent } from 'react'
-import { HiOutlineArrowNarrowLeft } from 'react-icons/hi'
-import { useHistory } from 'react-router-dom'
+import React, { FormEvent } from "react";
+import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
+import { useHistory } from "react-router-dom";
 
-import PageHeader from '../../components/PageHeader'
-import Input from '../../components/Input'
-import InputPassword from '../../components/InputPassword'
+import PageHeader from "../../components/PageHeader";
+import Input from "../../components/Input";
+import InputPassword from "../../components/InputPassword";
 
-import './style.css'
+import "./style.css";
 
 function CreateRegister() {
-  const history = useHistory()
+  const history = useHistory();
 
   function handleNavigateToPageLanding(event: FormEvent) {
-    event.preventDefault()
-    
-    history.push('/')
+    event.preventDefault();
+
+    history.push("/");
   }
 
   function handleFinalizedRegistration(event: FormEvent) {
-    event.preventDefault()
+    event.preventDefault();
 
-    history.push('/success-screen', {
-      title: 'Cadastro Concluído',
-      description: 'Agora você faz parte da plataforma da Proffy. Tenha uma ótima experiência.',
-      labelButton: 'Fazer Login'
-    })
+    history.push("/success-screen", {
+      title: "Cadastro Concluído",
+      description:
+        "Agora você faz parte da plataforma da Proffy. Tenha uma ótima experiência.",
+      labelButton: "Fazer Login",
+    });
   }
 
   return (
@@ -35,10 +36,7 @@ function CreateRegister() {
         </button>
       </PageHeader>
 
-      <form 
-        id="form-create-register" 
-        onSubmit={handleFinalizedRegistration}
-      >
+      <form id="form-create-register" onSubmit={handleFinalizedRegistration}>
         <button id="back" onClick={handleNavigateToPageLanding}>
           <HiOutlineArrowNarrowLeft size={35} color="#8257E5" />
         </button>
@@ -46,9 +44,7 @@ function CreateRegister() {
         <fieldset>
           <legend>Cadastro</legend>
 
-          <span>
-            Preencha os dados abaixo para começar.
-          </span>
+          <span>Preencha os dados abaixo para começar.</span>
 
           <div>
             <Input label="Nome" type="text" />
@@ -57,13 +53,13 @@ function CreateRegister() {
             <InputPassword />
           </div>
 
-          <button type="submit">Concluir cadastro</button>
-
+          <button id="button-complete" type="submit">
+            Concluir cadastro
+          </button>
         </fieldset>
       </form>
-
     </div>
-  )
+  );
 }
 
-export default CreateRegister
+export default CreateRegister;
