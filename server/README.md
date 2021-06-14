@@ -25,5 +25,3 @@
 - [x] Rota para listar aulas;
     - [x] Filtrada por matéria, dia da semana e horário
 - [x] Rota para deletar o horário de uma aula
-
-- [x] Test
