@@ -25,7 +25,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  
+
   font: 700 4.2rem Poppins;
   color: var(--color-text-title);
 }
@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-@media(min-width: 1100px) {
+@media (min-width: 1100px) {
   #page-create-register {
     display: flex;
     flex-direction: row-reverse;
@@ -60,7 +60,7 @@
   #form-create-register {
     width: 50%;
     height: 100%;
-    
+
     display: flex;
     flex-direction: column;
   }
@@ -80,7 +80,8 @@
   }
 
   #form-create-register fieldset {
-    margin: auto auto;
+    margin: auto;
+    margin-bottom: 0.8rem;
   }
 
   #form-create-register fieldset legend {
@@ -90,5 +91,9 @@
   #form-create-register fieldset span {
     width: 30rem;
     margin-right: 10rem;
+  }
+
+  #form-create-register fieldset button#button-complete {
+    margin-top: 1.4rem;
   }
 }
